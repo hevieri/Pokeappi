@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import DisplayFrame from './DisplayFrame'
 import DataFrame from './DataFrame'
 import { clampPokemonId, loadFromPokeApi } from './pokedexData'
+import styles from './Pokedex.module.css'
 
 const defaultPokemon = {
   id: 1,
@@ -71,7 +72,7 @@ export default function Pokedex() {
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+    <div className={styles.pokedex}>
       <DisplayFrame pokemon={pokemon} status={isLoading ? 'Cargando' : 'Listo'} />
       <DataFrame
         pokemon={pokemon}

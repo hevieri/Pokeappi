@@ -1,0 +1,103 @@
+.dataFrame {
+  border-radius: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.7);
+  padding: 1.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.titleGroup {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.subtitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  color: #f8fafc;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.controlButton {
+  border-radius: 16px;
+  background: rgba(51, 65, 85, 0.75);
+  color: #f8fafc;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  padding: 0.85rem 1rem;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.controlButton:hover {
+  background: rgba(51, 65, 85, 1);
+}
+
+.statList {
+  display: grid;
+  gap: 1rem;
+}
+
+.searchForm {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.searchInput {
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  padding: 1rem 1.1rem;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: rgba(148, 163, 184, 0.7);
+}
+
+.searchButton {
+  border-radius: 24px;
+  background: #34d399;
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.searchButton:hover {
+  background: #22c55e;
+}
+
+.error {
+  color: #f87171;
+  font-size: 0.9rem;
+}

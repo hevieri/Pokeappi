@@ -1,0 +1,111 @@
+.displayFrame {
+  border-radius: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.7);
+  padding: 1.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.titleGroup {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.subtitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #f8fafc;
+}
+
+.status {
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.12);
+  color: #c8feff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 0.7rem 1rem;
+}
+
+.body {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+}
+
+.spriteBox {
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  border-radius: 32px;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.sprite {
+  max-height: 240px;
+  max-width: 240px;
+}
+
+.details {
+  display: grid;
+  gap: 1rem;
+}
+
+.gridTwo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.detailCard,
+.abilityCard {
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.75);
+  padding: 1rem;
+}
+
+.detailTitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.detailValue {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.chipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.1);
+  color: #c8feff;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}

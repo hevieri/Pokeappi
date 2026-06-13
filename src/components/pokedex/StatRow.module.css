@@ -1,0 +1,38 @@
+.statRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statName {
+  width: 4rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.barTrack {
+  position: relative;
+  flex: 1;
+  height: 0.85rem;
+  border-radius: 999px;
+  background: rgba(71, 85, 105, 0.25);
+  overflow: hidden;
+}
+
+.barFill {
+  display: block;
+  height: 100%;
+  width: var(--stat-width);
+  border-radius: 999px;
+  background: linear-gradient(90deg, #34d399, #06b6d4);
+}
+
+.statValue {
+  width: 3rem;
+  text-align: right;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
