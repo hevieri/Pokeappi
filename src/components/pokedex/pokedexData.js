@@ -15,7 +15,7 @@ function titleCase(value) {
 }
 
 function statValue(pokemon, statName) {
-  return pokemon.stats.find((stat) => stat.stat.name === statName)?.base_stat || 0
+  return pokemon.stats.find((stat) => stat.stat.name === statName)?.base_stat ?? 0
 }
 
 function normalizeApiPokemon(pokemon) {

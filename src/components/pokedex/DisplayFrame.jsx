@@ -33,7 +33,7 @@ export default function DisplayFrame({ pokemon, status }) {
           {pokemon.sprite ? (
             <img src={pokemon.sprite} alt={pokemon.name} className={styles.sprite} />
           ) : (
-            <div className={styles.spriteBox}>Sin imagen</div>
+            <span>Sin imagen</span>
           )}
         </div>
 

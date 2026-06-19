@@ -1,21 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-pokeball-red: #b71626;
+}
 
 :root {
-  color-scheme: dark;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color-scheme: light;
 }
 
 html {
-  min-height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg,
+    #dae8f5 0%,
+    #ddeee0 50%,
+    #d4e8d4 100%);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: #090b0f;
-  color: white;
+  background: transparent;
+  color: #1e293b;
+  position: relative;
 }
 
 * {

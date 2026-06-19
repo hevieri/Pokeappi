@@ -1,9 +1,21 @@
 .dataFrame {
-  border-radius: 32px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  background: rgba(15, 23, 42, 0.7);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 45%), linear-gradient(135deg, #3f78b5, #4a82bf);
   padding: 1.5rem;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 640px) {
+  .dataFrame {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dataFrame {
+    padding: 2.5rem;
+  }
 }
 
 .header {
@@ -17,42 +29,45 @@
 
 .titleGroup {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.15rem;
 }
 
 .subtitle {
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #94a3b8;
 }
 
 .title {
   margin: 0;
-  font-size: 2rem;
-  color: #f8fafc;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f1f5f9;
 }
 
 .buttonRow {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.75rem;
 }
 
 .controlButton {
-  border-radius: 16px;
-  background: rgba(51, 65, 85, 0.75);
-  color: #f8fafc;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 50%), #30639a;
+  color: #cbd5e1;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 0.65rem 1rem;
   text-transform: uppercase;
-  transition: background 0.2s ease;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.15s ease;
 }
 
 .controlButton:hover {
-  background: rgba(51, 65, 85, 1);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fca5a5;
 }
 
 .statList {
@@ -60,86 +75,8 @@
   gap: 1rem;
 }
 
-.movesSection {
-  border-radius: 24px;
-  background: rgba(15, 23, 42, 0.8);
-  padding: 1.2rem;
-}
-
-.movesHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.typeLabel {
-  border-radius: 999px;
-  background: rgba(34, 211, 238, 0.12);
-  color: #bef264;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  padding: 0.6rem 0.9rem;
-  text-transform: uppercase;
-}
-
-.movesGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.moveChip {
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #f8fafc;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0.8rem 0.9rem;
-  text-align: center;
-}
-
-.searchForm {
-  margin-top: 1.5rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.searchInput {
-  width: 100%;
-  border-radius: 24px;
-  border: 1px solid rgba(148, 163, 184, 0.15);
-  background: rgba(15, 23, 42, 0.9);
-  color: #f8fafc;
-  padding: 1rem 1.1rem;
-  font-size: 0.95rem;
-  outline: none;
-}
-
-.searchInput::placeholder {
-  color: rgba(148, 163, 184, 0.7);
-}
-
-.searchButton {
-  border-radius: 24px;
-  background: #34d399;
-  color: #0f172a;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  padding: 1rem 1.2rem;
-  text-transform: uppercase;
-  transition: background 0.2s ease;
-}
-
-.searchButton:hover {
-  background: #22c55e;
-}
-
 .error {
   color: #f87171;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
 }

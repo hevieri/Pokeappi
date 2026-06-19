@@ -1,14 +1,26 @@
 .displayFrame {
-  border-radius: 32px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  background: rgba(15, 23, 42, 0.7);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 45%), linear-gradient(135deg, #3f78b5, #4a82bf);
   padding: 1.5rem;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 640px) {
+  .displayFrame {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .displayFrame {
+    padding: 2.5rem;
+  }
 }
 
 .header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.5rem;
@@ -16,50 +28,92 @@
 
 .titleGroup {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.25rem;
 }
 
 .subtitle {
-  font-size: 0.65rem;
-  letter-spacing: 0.28em;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #94a3b8;
 }
 
 .title {
   margin: 0;
-  font-size: 2.5rem;
-  line-height: 1;
-  color: #f8fafc;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  color: #f1f5f9;
+  font-weight: 800;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2rem;
+  }
 }
 
 .status {
   border-radius: 999px;
-  background: rgba(34, 211, 238, 0.12);
-  color: #c8feff;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  padding: 0.7rem 1rem;
+  background: rgba(250, 204, 21, 0.2);
+  color: #facc15;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 0.45rem 0.8rem;
+  white-space: nowrap;
 }
 
 .body {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .body {
+    grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .body {
+    gap: 1.5rem;
+  }
 }
 
 .spriteBox {
   display: grid;
   place-items: center;
-  min-height: 240px;
-  border-radius: 32px;
-  background: rgba(15, 23, 42, 0.85);
+  min-height: 200px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 50%), linear-gradient(135deg, #30639a, #3a72ad);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (min-width: 640px) {
+  .spriteBox {
+    min-height: 260px;
+  }
 }
 
 .sprite {
-  max-height: 240px;
-  max-width: 240px;
+  width: 100%;
+  height: auto;
+  max-width: 180px;
+  max-height: 180px;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.2));
+  transition: transform 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .sprite {
+    max-width: 220px;
+    max-height: 220px;
+  }
+}
+
+.sprite:hover {
+  transform: scale(1.05);
 }
 
 .details {
@@ -75,37 +129,40 @@
 
 .detailCard,
 .abilityCard {
-  border-radius: 24px;
-  background: rgba(15, 23, 42, 0.75);
-  padding: 1rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 50%), #30639a;
+  padding: 1.15rem 1.35rem;
 }
 
 .detailTitle {
-  font-size: 0.65rem;
-  letter-spacing: 0.22em;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #94a3b8;
+  font-weight: 600;
 }
 
 .detailValue {
-  margin-top: 0.75rem;
-  font-size: 1.25rem;
+  margin-top: 0.4rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: #f1f5f9;
 }
 
 .chipList {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
 }
 
 .chip {
-  padding: 0.55rem 0.9rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  background: rgba(34, 211, 238, 0.1);
-  color: #c8feff;
-  font-size: 0.7rem;
+  background: rgba(183, 22, 38, 0.2);
+  color: #fca5a5;
+  font-size: 0.6rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
 }

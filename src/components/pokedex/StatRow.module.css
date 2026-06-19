@@ -5,19 +5,26 @@
 }
 
 .statName {
-  width: 4rem;
+  min-width: 2.5rem;
   font-size: 0.7rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #94a3b8;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .statName {
+    min-width: 3rem;
+  }
 }
 
 .barTrack {
   position: relative;
   flex: 1;
-  height: 0.85rem;
+  height: 0.65rem;
   border-radius: 999px;
-  background: rgba(71, 85, 105, 0.25);
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 50%), #30639a;
   overflow: hidden;
 }
 
@@ -26,13 +33,32 @@
   height: 100%;
   width: var(--stat-width);
   border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.barHp {
   background: linear-gradient(90deg, #34d399, #06b6d4);
 }
 
+.barAtk {
+  background: linear-gradient(90deg, #f97316, #ef4444);
+}
+
+.barDef {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+
 .statValue {
-  width: 3rem;
+  width: 2.5rem;
   text-align: right;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: #f1f5f9;
+}
+
+@media (min-width: 640px) {
+  .statValue {
+    width: 3rem;
+    font-size: 0.95rem;
+  }
 }

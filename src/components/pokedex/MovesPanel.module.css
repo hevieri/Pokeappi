@@ -1,7 +1,8 @@
 .movesSection {
-  border-radius: 24px;
-  background: rgba(15, 23, 42, 0.8);
-  padding: 1.2rem;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, transparent 50%), #30639a;
+  padding: 1.25rem 1.35rem;
+  margin-top: 1.5rem;
 }
 
 .movesHeader {
@@ -9,40 +10,52 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .subtitle {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #94a3b8;
+  font-weight: 600;
 }
 
 .typeLabel {
   border-radius: 999px;
-  background: rgba(34, 211, 238, 0.12);
-  color: #bef264;
-  font-size: 0.7rem;
+  background: rgba(250, 204, 21, 0.2);
+  color: #facc15;
+  font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  padding: 0.6rem 0.9rem;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.7rem;
   text-transform: uppercase;
 }
 
 .movesGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+@media (min-width: 640px) {
+  .movesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .moveChip {
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #f8fafc;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0.8rem 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
   text-align: center;
+  transition: all 0.15s ease;
+}
+
+.moveChip:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fca5a5;
 }
