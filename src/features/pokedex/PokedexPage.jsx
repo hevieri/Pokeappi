@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
-import useCatches from '../hooks/useCatches.js'
-import PokemonModal from '../components/PokemonModal.jsx'
+import useCatches from './hooks/useCatches.js'
+import PokemonModal from '../../shared/components/PokemonModal.jsx'
 import styles from './PokedexPage.module.css'
 
 const SPRITE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork'

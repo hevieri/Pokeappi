@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { getTypeConfig, getAbilityIcon } from './pokedex/typeConfig'
-import useFavorite from '../hooks/useFavorite'
+import { getTypeConfig, getAbilityIcon } from '../../features/pokedex/components/pokedex/typeConfig'
+import useFavorite from '../../features/pokedex/hooks/useFavorite'
 import styles from './PokemonModal.module.css'
 
 function formatGender(rate) {

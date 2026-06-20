@@ -6,7 +6,7 @@
  * datos y estadísticas del Pokémon.
  */
 
-import Pokedex from '../components/pokedex/Pokedex.jsx'
+import Pokedex from '../features/pokedex/components/pokedex/Pokedex.jsx'
 
 export default function Stats({ initialPokemonId, onGoCare }) {
   return (

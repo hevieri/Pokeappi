@@ -118,7 +118,12 @@
   flex-direction: column;
   align-items: center;
   width: min(28%, 220px);
-  pointer-events: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.favSection:hover {
+  transform: scale(1.05);
 }
 
 .favSprite {

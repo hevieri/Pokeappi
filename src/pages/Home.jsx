@@ -10,7 +10,7 @@
  *   - onGoStats {function}: Callback para cambiar a la página Stats.
  */
 
-import NavButton from '../components/NavButton.jsx'
+import NavButton from '../shared/components/NavButton.jsx'
 
 export default function Home({ onGoStats }) {
   return (

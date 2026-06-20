@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import useCatches from '../hooks/useCatches.js'
-import { fetchBaseForms } from '../utils/baseForms.js'
+import useCatches from '../pokedex/hooks/useCatches.js'
+import { fetchBaseForms } from '../../shared/utils/baseForms.js'
 import styles from './GiftPage.module.css'
 
 export default function GiftPage({ onComplete }) {

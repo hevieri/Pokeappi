@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import useCatches from '../hooks/useCatches.js'
+import useCatches from '../features/pokedex/hooks/useCatches.js'
 import styles from './WelcomePage.module.css'
 
 const STARTER_IDS = new Set([1, 4, 7, 25, 152, 155, 158, 252, 255, 258])

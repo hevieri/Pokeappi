@@ -1,19 +1,27 @@
 import { useState, useEffect } from 'react'
-import useCatches from '../hooks/useCatches.js'
-import useFavorite from '../hooks/useFavorite'
-import NavButton from '../components/NavButton.jsx'
+import useCatches from '../pokedex/hooks/useCatches.js'
+import useFavorite from '../pokedex/hooks/useFavorite'
+import NavButton from '../../shared/components/NavButton.jsx'
 import styles from './TrainerPage.module.css'
 
 const TOTAL = 151
 const SPRITE_BASE = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork'
 
-export default function TrainerPage({ onGoGift, onGoWelcome }) {
+export default function TrainerPage({ onGoGift, onGoWelcome, onGoStats, onGoCombat }) {
   const { catches } = useCatches()
   const { favorite } = useFavorite()
   const [pokeName, setPokeName] = useState('')
+  const [wins, setWins] = useState(0)
 
   const progress = Math.min(catches.length / TOTAL, 1)
   const pct = Math.round(progress * 100)
+
+  useEffect(() => {
+    try {
+      const stored = parseInt(localStorage.getItem('pokeappi_wins'), 10)
+      if (!isNaN(stored)) setWins(stored)
+    } catch {}
+  }, [])
 
   useEffect(() => {
     if (favorite == null) {
@@ -35,6 +43,10 @@ export default function TrainerPage({ onGoGift, onGoWelcome }) {
   }
 
   const buttonDisabled = catches.length > 0 && catches.length % 10 !== 0
+
+  const handleFavClick = () => {
+    if (favorite != null) onGoStats(favorite)
+  }
 
   return (
     <section className="flex flex-col items-center min-h-[calc(100vh-8rem)] relative">
@@ -89,23 +101,23 @@ export default function TrainerPage({ onGoGift, onGoWelcome }) {
           <h2 className={styles.name}>Combate</h2>
 
           <div className={styles.statsRow}>
-            <span className={styles.statValue}>0</span>
+            <span className={styles.statValue}>{wins}</span>
             <span className={styles.statLabel}>victorias</span>
           </div>
 
           <div className={styles.bar}>
-            <div className={styles.barFillCombat} style={{ width: '0%' }} />
+            <div className={styles.barFillCombat} style={{ width: `${Math.min(100, wins * 5)}%` }} />
           </div>
-          <span className={styles.pct}>Próximamente</span>
+          <span className={styles.pct}>Nivel {1 + Math.floor(wins / 2)}</span>
 
-          <NavButton disabled>
+          <NavButton onClick={() => onGoCombat()} disabled={catches.length === 0}>
             Combatir
           </NavButton>
         </div>
       </div>
 
       {favorite != null && (
-        <div className={styles.favSection}>
+        <div className={styles.favSection} onClick={handleFavClick}>
           <img
             className={styles.favSprite}
             src={`${SPRITE_BASE}/${favorite}.png`}

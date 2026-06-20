@@ -18,7 +18,7 @@ import styles from './DisplayFrame.module.css'
 import SpriteSection from './SpriteSection'
 import PokemonInfo from './PokemonInfo'
 import { getTypeConfig } from './typeConfig'
-import useCared from '../../hooks/useCared'
+import useCared from '../../../care/hooks/useCared'
 
 export default function DisplayFrame({ pokemon, status, onGoCare, catchesLength }) {
   const { careDisabled, useCare } = useCared(catchesLength)
