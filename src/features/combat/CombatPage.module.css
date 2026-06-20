@@ -775,6 +775,9 @@
   .hudCard {
     min-width: 140px;
   }
+  .hud {
+    padding: 0.5rem 0.5rem;
+  }
   .logBox {
     max-height: 100px;
   }
@@ -786,5 +789,11 @@
   }
   .moveName {
     font-size: 0.75rem;
+  }
+  .resultBox {
+    padding: 1.5rem 1rem;
+  }
+  .catchSection {
+    padding: 0.5rem;
   }
 }

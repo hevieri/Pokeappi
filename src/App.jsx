@@ -23,9 +23,9 @@ export default function App() {
 
   useEffect(() => {
     try {
-      const w = parseInt(localStorage.getItem('pokeappi_wins'), 10)
+      const w = parseInt(localStorage.getItem('pokeiapi_wins'), 10)
       if (!isNaN(w)) setWins(w)
-      const s = parseInt(localStorage.getItem('pokeappi_streak'), 10)
+      const s = parseInt(localStorage.getItem('pokeiapi_streak'), 10)
       if (!isNaN(s)) setStreak(s)
     } catch {}
   }, [page])
@@ -73,9 +73,9 @@ export default function App() {
 
   const handleCombatBack = useCallback(() => {
     try {
-      const w = parseInt(localStorage.getItem('pokeappi_wins'), 10)
+      const w = parseInt(localStorage.getItem('pokeiapi_wins'), 10)
       if (!isNaN(w)) setWins(w)
-      const s = parseInt(localStorage.getItem('pokeappi_streak'), 10)
+      const s = parseInt(localStorage.getItem('pokeiapi_streak'), 10)
       if (!isNaN(s)) setStreak(s)
     } catch {}
     setCombatPokemon(null)
@@ -87,13 +87,13 @@ export default function App() {
     const newStreak = (streak || 0) + 1
     setWins(newWins)
     setStreak(newStreak)
-    localStorage.setItem('pokeappi_wins', String(newWins))
-    localStorage.setItem('pokeappi_streak', String(newStreak))
+    localStorage.setItem('pokeiapi_wins', String(newWins))
+    localStorage.setItem('pokeiapi_streak', String(newStreak))
   }, [wins, streak])
 
   const handleDefeat = useCallback(() => {
     setStreak(0)
-    localStorage.setItem('pokeappi_streak', '0')
+    localStorage.setItem('pokeiapi_streak', '0')
   }, [])
 
   const handleCatch = useCallback((id) => {

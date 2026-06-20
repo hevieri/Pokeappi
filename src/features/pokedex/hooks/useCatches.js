@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react'
 
-const STORAGE_KEY = 'pokeappi_catches'
+const STORAGE_KEY = 'pokeiapi_catches'
 
 export default function useCatches() {
   const [catches, setCatches] = useState([])

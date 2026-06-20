@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const COUNT_KEY = 'pokeappi_care_count'
+const COUNT_KEY = 'pokeiapi_care_count'
 
 export default function useCared(resetKey) {
   const [careCount, setCareCount] = useState(0)

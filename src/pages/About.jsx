@@ -14,7 +14,7 @@ export default function About() {
             ACERCA DE
           </h1>
         </div>
-        <p className="text-xs uppercase tracking-[0.35em] text-pokeball-red font-semibold">Pokeappi</p>
+        <p className="text-xs uppercase tracking-[0.35em] text-pokeball-red font-semibold">PokeiApi</p>
         <p className="mx-auto mt-4 max-w-lg text-sm text-slate-500 leading-relaxed">
           Conoce más sobre esta aplicación y las tecnologías utilizadas.
         </p>
@@ -22,7 +22,7 @@ export default function About() {
 
       <div className={styles.card}>
         <p className={styles.text}>
-          Pokeappi es una aplicación web para explorar datos de Pokémon usando la
+          PokeiApi es una aplicación web para explorar datos de Pokémon usando la
           PokéAPI. Busca Pokémon por nombre o número, consulta sus estadísticas,
           tipos, habilidades y movimientos.
         </p>

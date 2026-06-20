@@ -2,7 +2,7 @@
  * Stats
  *
  * Página contenedor para el componente Pokedex. Muestra el encabezado
- * global de la aplicación (Pokédex / Pokeappi) y el Pokedex con los
+ * global de la aplicación (Pokédex / PokeiApi) y el Pokedex con los
  * datos y estadísticas del Pokémon.
  */
 

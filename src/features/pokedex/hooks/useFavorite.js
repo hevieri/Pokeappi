@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const STORAGE_KEY = 'pokeappi_favorite'
+const STORAGE_KEY = 'pokeiapi_favorite'
 
 export default function useFavorite() {
   const [favorite, setFavorite] = useState(null)

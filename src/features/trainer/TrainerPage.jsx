@@ -18,7 +18,7 @@ export default function TrainerPage({ onGoGift, onGoWelcome, onGoStats, onGoComb
 
   useEffect(() => {
     try {
-      const stored = parseInt(localStorage.getItem('pokeappi_wins'), 10)
+      const stored = parseInt(localStorage.getItem('pokeiapi_wins'), 10)
       if (!isNaN(stored)) setWins(stored)
     } catch {}
   }, [])
